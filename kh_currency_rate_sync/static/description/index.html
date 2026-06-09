@@ -1,0 +1,273 @@
+<section class="oe_container" style="font-family: 'Montserrat', 'Odoo Unicode Support Noto', sans-serif;">
+  <div class="row mt-3">
+
+    <ul class="offset-3 col-6 text-left d-md-none list-unstyled pt-5">
+      <li class="border-top border-bottom">
+        <div class="my-2 mx-sm-2" style="color: #6F649A;"><i class="fa fa-check-circle"></i> Community</div>
+      </li>
+      <li class="border-bottom">
+        <div class="my-2 mx-sm-2" style="color: #694D65;"><i class="fa fa-check-circle"></i> Enterprise</div>
+      </li>
+    </ul>
+
+    <div class="col-12 text-right d-none d-md-block">
+      <span class="m-2"
+        style="float: right; background-color: #694D65; border-color: #694D65; color: #FFFFFF; padding: 5px 18px; border-radius: 15px 0 15px 0; opacity: 1;"><i
+          class="fa fa-check"></i> Enterprise</span>
+      <span class="m-2"
+        style="float: right; background-color: #6F649A; border-color: #6F649A; color: #FFFFFF; padding: 5px 18px; border-radius: 15px 0 15px 0; opacity: 1;"><i
+          class="fa fa-check"></i> Community</span>
+    </div>
+
+    <div class="offset-lg-1 col-lg-10 mt-5">
+      <h1 class="text-center" style="font-size: 40px; font-weight: 900; color: #154577;">Currency Rate Update Sync</h1>
+      <p class="text-center" style="font-size: 18px; color: #7D7D7D; line-height: 2rem;">
+        Automate your daily currency exchange rates using reliable providers like ECB and Frankfurter. Supports
+        backdated rate pulling and seamless multi-company configuration.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container oe_dark" style="font-family: 'Montserrat', 'Odoo Unicode Support Noto', sans-serif;">
+  <div class="oe_row oe_spaced">
+    <h2 class="oe_slogan" style="color:#154577;">Overview & Key Features</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="list-unstyled">
+          <li style="font-size: 18px; margin-bottom: 10px;"><i class="fa fa-check-circle text-success mr-2"></i>
+            **Reliable Providers:** Utilizes the **European Central Bank (ECB)** as the primary rate provider. If the
+            primary fails, it seamlessly falls back to the **Frankfurter** API to ensure no interruption in rate
+            syncing.</li>
+          <li style="font-size: 18px; margin-bottom: 10px;"><i class="fa fa-check-circle text-success mr-2"></i>
+            **Automated Daily Sync:** Cron jobs run daily to fetch the latest rates without manual intervention.</li>
+          <li style="font-size: 18px; margin-bottom: 10px;"><i class="fa fa-check-circle text-success mr-2"></i>
+            **Multi-Company Support:** Highly compatible with multi-company environments. You can configure different
+            active currencies and synchronization settings independently for each company.</li>
+          <li style="font-size: 18px; margin-bottom: 10px;"><i class="fa fa-check-circle text-success mr-2"></i>
+            **Historical Rate Pulling:** Easily fetch rates for previous dates across a specified date range.</li>
+          <li style="font-size: 18px; margin-bottom: 10px;"><i class="fa fa-check-circle text-success mr-2"></i>
+            **Invoice Auto-Sync:** Ensure your invoices always use the latest rates by automatically triggering a sync
+            when opening a new invoice.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container" style="font-family: 'Montserrat', 'Odoo Unicode Support Noto', sans-serif;">
+  <div class="oe_row oe_spaced">
+    <h2 class="oe_slogan" style="color:#154577;">Configuration & Real-Time Syncing</h2>
+    <div class="oe_span12">
+      <p class="oe_mt32 text-center" style="font-size: 18px; color: #7D7D7D; line-height: 2rem;">
+        Configure the currencies you want to synchronize directly from your accounting settings. The interface gives you
+        a clear overview of the sync status.
+      </p>
+      <ul class="m-0 py-2" style="font-size: 16px; color: #7D7D7D; line-height: 1.8rem;">
+        <li>**Sync Currency Rate:** Define specifically which currency rates you want to sync, so you don't pollute your
+          system with unnecessary data.</li>
+        <li>**Invoice Open Auto Sync:** Enable this boolean setting to automatically check and sync today's currency
+          rate every time a user opens a new invoice. This guarantees the invoice amount is converted using the freshest
+          available rate.</li>
+        <li>**Status & Last Updated:** Instantly view whether the last sync was successful and exactly when it was
+          updated by the provider.</li>
+        <li>**Sync Now:** Click this button to perform an immediate manual sync for the current date.</li>
+        <li>**Sync Backdates:** Access a powerful tool to retrieve rates from the past.</li>
+      </ul>
+    </div>
+    <div class="oe_row oe_centered mt-4">
+      <div class="oe_span12 text-center">
+        <img class="oe_picture oe_screenshot mx-auto d-block" src="currency_rate_update_configiration.png"
+          style="max-width: 100%; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container oe_dark" style="font-family: 'Montserrat', 'Odoo Unicode Support Noto', sans-serif;">
+  <div class="oe_row oe_spaced">
+    <h3 class="oe_slogan" style="color:#ec920a;">Backdated Currency Rate Pulling</h3>
+    <div class="oe_span12">
+      <p class="oe_mt32 text-center" style="font-size: 18px; color: #7D7D7D; line-height: 2rem;">
+        Need to fill in missing rates from last month? Click the **Sync Backdates** button to open the historical rate
+        wizard.
+      </p>
+      <ul class="m-0 py-2 offset-md-2 col-md-8" style="font-size: 16px; color: #7D7D7D; line-height: 1.8rem;">
+        <li>**Start & End Date:** Define the exact period you want to fetch historical currency rates for.</li>
+        <li>**Specific Currency:** Select a particular currency from the dropdown if you only need rates for one. Leave
+          it empty to automatically sync all active and configured currencies for your company within that period.</li>
+      </ul>
+    </div>
+    <div class="oe_row oe_centered mt-4">
+      <div class="oe_span12 text-center">
+        <img class="oe_picture oe_screenshot mx-auto d-block" src="previous_date_pull_rate.png"
+          style="max-width: 80%; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container" style="font-family: 'Montserrat', 'Odoo Unicode Support Noto', sans-serif;">
+  <div class="oe_row oe_spaced">
+    <h3 class="oe_slogan" style="color:#154577;">Invoice Date-Based Currency Rates</h3>
+    <div class="oe_span12">
+      <p class="oe_mt32 text-center" style="font-size: 18px; color: #7D7D7D; line-height: 2rem;">
+        Automatically apply the precise currency rate based on the selected invoice date. When users change the invoice
+        date, the system instantly fetches and applies the historical exchange rate for that exact day.
+      </p>
+      <ul class="m-0 py-2 offset-md-2 col-md-8" style="font-size: 16px; color: #7D7D7D; line-height: 1.8rem;">
+        <li>**Date-Based Precision:** Choose any past invoice date, and the system automatically retrieves and uses the
+          official exchange rate recorded for that day.</li>
+        <li>**Real-Time Recalculation:** Invoice amounts and lines are instantly recalculated using the correct
+          historical rate, requiring no manual intervention.</li>
+        <li>**Accurate Accounting:** Ensures your ledger remains historically accurate and compliant by applying the
+          exact conversion rates present at the time of the transaction.</li>
+      </ul>
+    </div>
+    <div class="oe_row oe_centered mt-4">
+      <div class="oe_span12 text-center">
+        <img class="oe_picture oe_screenshot mx-auto d-block" src="invoice_apply_currency_rate.png"
+          style="max-width: 80%; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="mt-5" style="border-radius:16px; border:1px solid #EBEEF2; padding:60px 40px">
+  <div class="text-center mt-4">
+    <h3 class="mb-0"
+      style="color:#000; text-align:center; font-family:Montserrat; font-size:40px; font-style:normal; font-weight:700; line-height:normal; text-transform:uppercase; padding-bottom:50px">
+      Our Services</h3>
+  </div>
+  <div class="row mt-3">
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#FFE2E5; margin:auto; border-radius:8px">
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#FA5A7D; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-cogs" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600"> Odoo Customization</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#FFF4DE; margin:auto; border-radius:8px">
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#FF947A; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-wrench" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600"> Odoo Implementation</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#DCFCE7; margin:auto; border-radius:8px">
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#3CD856; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-life-ring" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600">Odoo Support</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#F3E8FF; margin:auto; border-radius:8px">
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#BF83FF; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-exchange" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600">Odoo Migration</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#F1F9FF; margin:auto; border-radius:8px">
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#01649C; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-puzzle-piece" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600">Odoo Integration</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#EDF8ED; margin:auto; border-radius:8px">
+
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#69CC70; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-users" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600">Odoo Consultancy</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#F1F6FF; margin:auto; border-radius:8px">
+
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#2E4556; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-certificate" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600">Odoo Licensing</span>
+        </div>
+      </span>
+    </div>
+    <div class="col-lg-3 col-sm-12 mb-3">
+      <span style="text-decoration:none">
+        <div class="btn-lg btn-block p-4 mb-2 d-flex flex-column justify-content-center align-items-center"
+          style="font-size:25px; font-weight:bold; background-color:#FAF6EA; margin:auto; border-radius:8px">
+
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:#FCD12C; border-radius:50%; height:56px; width:56px">
+            <i class="fa fa-user-plus" style="font-size: 28px; color: white;"></i>
+          </div>
+          <span style="font-size:18px; color:var(--text-color); font-weight:600">Hire Odoo Developer</span>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="mt-5 bg-transparent">
+  <div class="container" style="border-radius:16px; border:1px solid #E5E7EB; padding:40px 24px;">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <h3 style="font-size:1.5rem; font-weight:700; color:#111827;">
+          Odoo services by Khichdi InfoTech
+        </h3>
+        <p style="margin-top:12px; color:#4B5563;">
+          Khichdi InfoTech provides complete Odoo services including implementation, customization, migration, and
+          long-term support.
+          We help businesses improve customer communication and lead capture with practical website solutions.
+        </p>
+        <div class="mt-4">
+          <h4 style="font-size:1rem; font-weight:600; color:#6B7280; margin-bottom:4px;">Phone</h4>
+          <p style="margin:0; color:#111827;">+91-9974768675</p>
+        </div>
+        <div class="mt-3">
+          <h4 style="font-size:1rem; font-weight:600; color:#6B7280; margin-bottom:4px;">Email</h4>
+          <p style="margin:0; color:#111827;">
+            Sales: contact@khichdiinfotech.com<br>
+            Support: support@khichdiinfotech.com
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 mt-4 mt-lg-0 text-center">
+        <img src="banner.png" class="img-fluid" alt="Khichdi InfoTech Odoo integration services">
+      </div>
+    </div>
+  </div>
+</section>

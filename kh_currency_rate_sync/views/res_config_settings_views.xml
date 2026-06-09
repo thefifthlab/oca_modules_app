@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_currency_rate_sync" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.currency.rate.sync</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='main_currency']" position="after">
+                 <setting id="currency_rate_update" string="Update Currency Rates" company_dependent="1">
+                    <div class="content-group">
+
+                            <label for="currency_sync_ids" class="col-lg-3 o_light_label" string="Sync Currencies"/>
+                            <field name="currency_sync_ids" widget="many2many_tags"/>
+                            <br/>
+                            <label for="currency_sync_auto_on_invoice_open" class="col-lg-3 o_light_label" string="Invoice Open Auto Sync"/>
+                            <field name="currency_sync_auto_on_invoice_open"/>
+                            <br/>
+                            <button name="action_currency_sync_now" string="Update Currency Rate Now" type="object" class="btn btn-primary"/>
+                            <button name="action_open_currency_backfill_wizard" string="Backfill Currency Rates" type="object" class="btn btn-link"/>
+                            <br/>
+                            <label for="currency_last_sync_date" class="col-lg-3 o_light_label" string="Last Run"/>
+                            <field name="currency_last_sync_date" readonly="1"/>
+                            <br/>
+                            <label for="currency_last_sync_status" class="col-lg-3 o_light_label" string="Last Status"/>
+                            <field name="currency_last_sync_status" readonly="1" nolabel="1"/>
+                            <br/>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
